@@ -60,7 +60,7 @@ const detailedProjectData = projectsData.map(p => {
         return {
             ...p,
             details: (
-                <div className="tech-details>
+                <div className="tech-details">
                     <p>
                         This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
                         For example, I created a machine learning and AI based program to predict the likelyhood of rain, depending on historical data called RainCheck (pictured above). 
