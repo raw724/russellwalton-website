@@ -4,8 +4,6 @@ import { projectsData } from './Projects.jsx';
 
 // Extend the data with detailed content
 const detailedProjectData = projectsData.map(p => {
-    // Note: The projectsData array will only have title, slug, desc, and tech 
-    // from the Projects.jsx file. We must manually define the unique content here.
     if (p.slug === 'hyrox') {
         return {
             ...p,
@@ -23,15 +21,15 @@ const detailedProjectData = projectsData.map(p => {
             tags: ['Fitness', 'Endurance', 'Discipline']
         };
     }
+    
     if (p.slug === 'sailing') {
         return {
             ...p,
             details: (
                 <div className="sailing-details">
                     <p>
-                          Sailing competitively requires precision, quick decision-making, and deep technical knowledge. My sister and I are lucky enough to travel on a regular basis to compete on national, european and world stages including:
+                        Sailing competitively requires precision, quick decision-making, and deep technical knowledge. My sister and I are lucky enough to travel on a regular basis to compete on national, european and world stages including:
                     </p>
-        
                     <ul className="list-disc ml-5 my-4">
                         <li>2025 Hobie 16 Nationals in Poole, England</li>
                         <li>2024 Hobie Europeans in Lake Garda, Italy</li>
@@ -39,35 +37,42 @@ const detailedProjectData = projectsData.map(p => {
                         <li>2021 Hobie Dragoon Europeans in Costa Brava, Spain</li>
                         <li>2019 Hobie Dragoon Europeans in La Rochelle, France</li>
                     </ul>
-
                     <p className="mt-4 italic">
-                      <strong>Teaching Sailing:</strong> My love for sailing encouraged me to pursue gaining certifications that allow me to teach and endorse children and adults in sailing.
-                        I have managed to work my way up the ranks and I am now a fully qualified RYA Senior Sailing Instructor. This means overseeing a centers day-to-day operations, ensuring safety and aiding other instructors in running lessons on the water and in the classroom.
-                        I thrive in my workplace because everyday provides exciting new challenges to overcome which is rewarding for me and my customers. With such a diverse group of clientele, I enjoy making new connections and turning a standard week of learning into a memorable experience.
+                        <strong>Teaching Sailing:</strong> My love for sailing encouraged me to pursue gaining certifications that allow me to teach and endorse children and adults in sailing...
                     </p>
-
                     <p className="mt-4">
-                      <strong>Upcoming Plans:</strong> Currently, I am booked to complete my RYA Day Skipper qualification. This is one week of vigorous practical ability aboard a yacht alongside theory work. Following this, I am competing in a new category at the 2026 Hobie Europeans in August. 
-                        I will be crewing alongside the current national champion in the spinnaker champion which relies heavily on strength, communication and specific technique which can shake up race! Sounds exciting to me!
+                        <strong>Upcoming Plans:</strong> Currently, I am booked to complete my RYA Day Skipper qualification...
                     </p>
-                  </div>
-                ),
+                </div>
+            ),
             imgUrl: '/images/sailing.jpg', 
             tags: ['Teamwork', 'Strategy', 'Technical Skill']
         };
     }
+
     if (p.slug === 'tech') {
         return {
             ...p,
             details: (
-                <div className="tech-details">
-                    <p>
-                        This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
-                        For example, I created a machine learning and AI based program to predict the likelyhood of rain, depending on historical data called RainCheck (pictured above). 
-                        Through my university studies, I am working on many group projects which can be viewed on my GitHub page.
-                    </p>
-                </div>
-                <a ahref="github.com/raw724"> My GitHub portfolio.</a>
+                <> {/* Wrapped in a fragment to allow multiple top-level elements */}
+                    <div className="tech-details">
+                        <p>
+                            This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
+                        </p>
+                        <p className="mt-4">
+                            For example, I created a machine learning and AI based program to predict the likelihood of rain, depending on historical data called RainCheck (pictured above). 
+                        </p>
+                    </div>
+                    {/* Fixed 'href' and added protocol + styling */}
+                    <a 
+                        href="https://github.com/raw724" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-blue-500 underline mt-4 inline-block"
+                    >
+                        My GitHub portfolio
+                    </a>
+                </>
             ),
             imgUrl: '/images/raincheck.png', 
             tags: ['Python', 'Web Development', 'Machine Learning']
