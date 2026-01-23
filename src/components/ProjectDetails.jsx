@@ -16,7 +16,7 @@ const detailedProjectData = projectsData.map(p => {
                         Bi-weekly, I attend a Hyrox specific class at my gym. After completing the mixed doubles event in Manchester, I aim to finish my first solo event in London. 
                     </p>
                 </div>
-                ),
+            ),
             imgUrl: '/images/hyrox.jpg', 
             tags: ['Fitness', 'Endurance', 'Discipline']
         };
@@ -38,14 +38,12 @@ const detailedProjectData = projectsData.map(p => {
                         <li>2019 Hobie Dragoon Europeans in La Rochelle, France</li>
                     </ul>
 
-                    {/* Paragraph for Sailing Qualifications */}
                     <p className="mt-4 italic">
                       <strong>Teaching Sailing:</strong> My love for sailing encouraged me to pursue gaining certifications that allow me to teach and endorse children and adults in sailing.
                         I have managed to work my way up the ranks and I am now a fully qualified RYA Senior Sailing Instructor. This means overseeing a centers day-to-day operations, ensuring safety and aiding other instructors in running lessons on the water and in the classroom.
                         I thrive in my workplace because everyday provides exciting new challenges to overcome which is rewarding for me and my customers. With such a diverse group of clientele, I enjoy making new connections and turning a standard week of learning into a memorable experience.
                     </p>
 
-                    {/* Paragraph for Future Plans */}
                     <p className="mt-4">
                       <strong>Upcoming Plans:</strong> Currently, I am booked to complete my RYA Day Skipper qualification. This is one week of vigorous practical ability aboard a yacht alongside theory work. Following this, I am competing in a new category at the 2026 Hobie Europeans in August. 
                         I will be crewing alongside the current national champion in the spinnaker champion which relies heavily on strength, communication and specific technique which can shake up race! Sounds exciting to me!
@@ -60,13 +58,13 @@ const detailedProjectData = projectsData.map(p => {
         return {
             ...p,
             details: (
-                <div>
+                <div className="tech-details>
                     This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
                     For example, I created a machine learning and AI based program to predict the likelyhood of rain, depending on historical data called RainCheck (pictured above). 
                     Through my university studies, I am working on many group projects which can be viewed on my GitHub page.
                 </div>
                 <a ahref="github.com/raw724"> My GitHub portfolio.</a>
-                ),
+            ),
             imgUrl: '/images/raincheck.png', 
             tags: ['Python', 'Web Development', 'Machine Learning']
         };
