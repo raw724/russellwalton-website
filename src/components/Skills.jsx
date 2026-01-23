@@ -14,7 +14,7 @@ const coreSkills = [
   {
     title: 'Brand / Experience Activation',
     icon: '✨', // Sparkle icon for experience
-    description: 'Adept at setting up and producing quality deliverables under a brand’s specific vibe, ensuring customer experiences are consistently positive, memorable, and aligned with organizational goals.',
+    description: 'Adept at setting up and producing quality deliverables under a brand’s specific vibe. Through experience delivering engaging sailing lessons and schemes whilst ensuring customer experiences are consistently positive, memorable, and aligned with organization specific goals.',
   },
   {
     title: 'Self-Improvement & Initiative',
