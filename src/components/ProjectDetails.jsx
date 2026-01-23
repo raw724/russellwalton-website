@@ -10,10 +10,12 @@ const detailedProjectData = projectsData.map(p => {
         return {
             ...p,
             details: (
-                <div className='hyrox-details'>
+                <div className="hyrox-details">
                     <p>
-                        Hyrox is a global indoor fitness race. It combines functional exercises with running, testing both endurance and strength. My training currently involves a rigorous combination of HIIT, lifting, running and perfecting the specialized functional movements for the event. 
-                        Bi-weekly, I attend a Hyrox specific class at my gym. After completing the mixed doubles event in Manchester, I aim to finish my first solo event in London. 
+                        Hyrox is a global indoor fitness race. It combines functional exercises with running, testing both endurance and strength. My training currently involves a rigorous combination of HIIT, lifting, running, and perfecting the specialized functional movements for the event. 
+                    </p>
+                    <p className="mt-4">
+                        Bi-weekly, I attend a Hyrox-specific class at my gym. After completing the mixed doubles event in Manchester, I am currently pushing my limits to finish my first solo event in London. This level of physical discipline and mental resilience is what drives me to perform at my peak.
                     </p>
                 </div>
             ),
@@ -59,9 +61,11 @@ const detailedProjectData = projectsData.map(p => {
             ...p,
             details: (
                 <div className="tech-details>
-                    This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
-                    For example, I created a machine learning and AI based program to predict the likelyhood of rain, depending on historical data called RainCheck (pictured above). 
-                    Through my university studies, I am working on many group projects which can be viewed on my GitHub page.
+                    <p>
+                        This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
+                        For example, I created a machine learning and AI based program to predict the likelyhood of rain, depending on historical data called RainCheck (pictured above). 
+                        Through my university studies, I am working on many group projects which can be viewed on my GitHub page.
+                    </p>
                 </div>
                 <a ahref="github.com/raw724"> My GitHub portfolio.</a>
             ),
