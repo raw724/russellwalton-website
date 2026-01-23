@@ -17,7 +17,34 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'sailing') {
         return {
             ...p,
-            details: 'Sailing competitively requires precision, quick decision-making, and deep technical knowledge of how to keep the boat cruising flat on the water; because a flat boat is a fast boat. Competing in high-performance classes allows me to apply critical thinking and teamwork under intense pressure. My sister and I have competed on national, european and world stages in the Hobie 16 category.',
+            details: (
+                <div className="sailing-details">
+                    <p>
+                          Sailing competitively requires precision, quick decision-making, and deep technical knowledge. My sister and I are lucky enough to travel on a regular basis to compete on national, european and world stages including:
+                    </p>
+        
+                    <ul className="list-disc ml-5 my-4">
+                        <li>2025 Hobie 16 Nationals in Poole, England</li>
+                        <li>2024 Hobie Europeans in Lake Garda, Italy</li>
+                        <li>2022 Hobie 16 Worlds in Costa Brava, Spain</li>
+                        <li>2021 Hobie Dragoon Europeans in Costa Brava, Spain</li>
+                        <li>2019 Hobie Dragoon Europeans in La Rochelle, France</li>
+                    </ul>
+
+                    {/* Paragraph for Sailing Qualifications */}
+                    <p className="mt-4 italic">
+                      <strong>Teaching Sailing:</strong> My love for sailing encouraged me to pursue gaining certifications that allow me to teach and endorse children and adults in sailing.
+                        I have managed to work my way up the ranks and I am now a fully qualified RYA Senior Sailing Instructor. This means overseeing a centers day-to-day operations, ensuring safety and aiding other instructors in running lessons on the water and in the classroom.
+                        I thrive in my workplace because everyday provides exciting new challenges to overcome which is rewarding for me and my customers. With such a diverse group of clientele, I enjoy making new connections and turning a standard week of learning into a memorable experience.
+                    </p>
+
+                    {/* Paragraph for Future Plans */}
+                    <p className="mt-4">
+                      <strong>Upcoming Plans:</strong> Currently, I am booked to complete my RYA Day Skipper qualification. This is one week of vigorous practical ability aboard a yacht alongside theory work. Following this, I am competing in a new category at the 2026 Hobie Europeans in August. 
+                        I will be crewing alongside the current national champion in the spinnaker champion which relies heavily on strength, communication and specific technique which can shake up race! Sounds exciting to me!
+                    </p>
+                  </div>
+                ),
             imgUrl: '/images/sailing.jpg', 
             tags: ['Teamwork', 'Strategy', 'Technical Skill']
         };
