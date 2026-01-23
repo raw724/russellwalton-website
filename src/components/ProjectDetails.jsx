@@ -102,36 +102,36 @@ export default function ProjectDetails() {
     }
     
     // 3. Render the project details
-return (
-    <section className="pt-40 pb-20 max-w-6xl mx-auto">
-        {/* Back Button */}
-        <Link to="/" className="text-[--accent-to] flex items-center gap-2 mb-8 font-semibold">
-            &larr; Back to Pursuits
-        </Link>
-
-        {/* Title and Image */}
-        <h1 className="text-5xl font-extrabold mb-8">{project.title}</h1>
-        
-        <img 
-            src={project.imgUrl} 
-            alt={`${project.title} Banner`} 
-            className="w-full rounded-xl object-cover mb-10 shadow-lg"
-            onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/1200x400/7c3aed/ffffff?text=Image+Placeholder'; }}
-        />
-
-        <div className="grid lg:grid-cols-3 gap-8">
-            {/* Main Content */}
-            <div className="lg:col-span-2">
-                {/* Changed from <p> to <div> to support the nested HTML in your details */}
-                <div className="text-xl leading-relaxed">
-                    {project.details}
+    return (
+        <section className="pt-40 pb-20 max-w-6xl mx-auto">
+            {/* Back Button */}
+            <Link to="/" className="text-[--accent-to] flex items-center gap-2 mb-8 font-semibold">
+                &larr; Back to Pursuits
+            </Link>
+    
+            {/* Title and Image */}
+            <h1 className="text-5xl font-extrabold mb-8">{project.title}</h1>
+            
+            <img 
+                src={project.imgUrl} 
+                alt={`${project.title} Banner`} 
+                className="w-full rounded-xl object-cover mb-10 shadow-lg"
+                onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/1200x400/7c3aed/ffffff?text=Image+Placeholder'; }}
+            />
+    
+            <div className="grid lg:grid-cols-3 gap-8">
+                {/* Main Content */}
+                <div className="lg:col-span-2">
+                    {/* Changed from <p> to <div> to support the nested HTML in your details */}
+                    <div className="text-xl leading-relaxed">
+                        {project.details}
+                    </div>
+                    
                 </div>
                 
+                {/* The right-hand column (lg:col-span-1) is currently empty, 
+                    leaving plenty of clean white space which looks very professional. */}
             </div>
-            
-            {/* The right-hand column (lg:col-span-1) is currently empty, 
-                leaving plenty of clean white space which looks very professional. */}
-        </div>
-    </section>
+        </section>
 );
 
