@@ -123,17 +123,10 @@ export default function ProjectDetails() {
                     <p className="text-[--muted]">{project.desc}</p>
                 </div>
                 
-                {/* Sidebar / Key Details Card */}
-                <div className="glass p-6 rounded-xl self-start">
-                    <h3 className="text-xl font-bold mb-3">Skills</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, index) => (
-                            <span key={index} className="px-3 py-1 text-sm rounded-full bg-gray-600/20 text-[--text]">{tag}</span>
-                        ))}
-                    </div>
+                
 
                    
-                </div>
+                
             </div>
         </section>
     );
