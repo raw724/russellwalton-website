@@ -9,7 +9,14 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'hyrox') {
         return {
             ...p,
-            details: 'Hyrox is a fitness race for everybody. It combines functional exercises with running, testing both endurance and strength. My training involves a rigorous combination of HIIT, lifting, running and perfecting the specialized functional movements for the event.',
+            details: (
+                <div className='hyrox-details'>
+                    <p>
+                        Hyrox is a global indoor fitness race. It combines functional exercises with running, testing both endurance and strength. My training currently involves a rigorous combination of HIIT, lifting, running and perfecting the specialized functional movements for the event. 
+                        Bi-weekly, I attend a Hyrox specific class at my gym. After completing the mixed doubles event in Manchester, I aim to finish my first solo event in London. 
+                    </p>
+                </div>
+                ),
             imgUrl: '/images/hyrox.jpg', 
             tags: ['Fitness', 'Endurance', 'Discipline']
         };
@@ -52,7 +59,14 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'tech') {
         return {
             ...p,
-            details: 'This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. For example, I created a machine learning and AI based program to predict the likelyhood of rain, depending on historical data.',
+            details: (
+                <div>
+                    This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
+                    For example, I created a machine learning and AI based program to predict the likelyhood of rain, depending on historical data called RainCheck (pictured above). 
+                    Through my university studies, I am working on many group projects which can be viewed on my GitHub page.
+                </div>
+                <a ahref="github.com/raw724"> My GitHub portfolio.</a>
+                ),
             imgUrl: '/images/raincheck.png', 
             tags: ['Python', 'Web Development', 'Machine Learning']
         };
