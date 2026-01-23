@@ -8,6 +8,7 @@ export default function Contact() {
         <p>Email: <a href="mailto:me@russellwalton.com" className="underline">me@russellwalton.com</a></p>
         <p>Phone: +44 7797 770500</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/russell-walton-363907253/" className="underline">www.linkedin.com/russellwalton</a></p>
+        <p>Github: <a href="https://github.com/raw724" className="underline">www.github.com/raw724</a></p>
       </div>
     </section>
   );
