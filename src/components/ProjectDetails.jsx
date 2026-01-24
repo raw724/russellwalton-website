@@ -7,6 +7,7 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'hyrox') {
         return {
             ...p,
+            desc: "",
             details: (
                 <div className="hyrox-details">
                     <p>
@@ -25,6 +26,7 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'sailing') {
         return {
             ...p,
+            desc: "",
             details: (
                 <div className="sailing-details">
                     <p>
@@ -53,6 +55,7 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'tech') {
         return {
             ...p,
+            desc: "",
             details: (
                 <> {/* Wrapped in a fragment to allow multiple top-level elements */}
                     <div className="tech-details">
@@ -122,16 +125,17 @@ export default function ProjectDetails() {
             <div className="grid lg:grid-cols-3 gap-8">
                 {/* Main Content */}
                 <div className="lg:col-span-2">
-                    {/* Changed from <p> to <div> to support the nested HTML in your details */}
+                    {/* This renders your new detailed paragraphs and lists */}
                     <div className="text-xl leading-relaxed">
                         {project.details}
                     </div>
                     
+                    {/* DO NOT put {project.desc} or the <h3>Key Focus</h3> here */}
                 </div>
                 
-                {/* The right-hand column (lg:col-span-1) is currently empty, 
-                    leaving plenty of clean white space which looks very professional. */}
+                <div className="lg:col-span-1">
+                    {/* Left empty for professional spacing */}
+                </div>
             </div>
         </section>
-);
-
+    );
