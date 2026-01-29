@@ -24,7 +24,7 @@ export default function Hero() {
                      hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] transition-all duration-300 
                      cursor-pointer block"
         >
-            
+          <div className="text-center">
             {/* 2. RED BULL THEME: Use a rocket icon and accent color for the header */}
             <h3 className="text-2xl font-black mb-3 flex items-center justify-center gap-3 text-[--accent-to]">
                 MY NEXT GOAL 🚀
