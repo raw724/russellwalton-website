@@ -14,7 +14,7 @@ const detailedProjectData = projectsData.map(p => {
                         Hyrox is a global indoor fitness race. It combines functional exercises with running, testing both endurance and strength. My training currently involves a rigorous combination of HIIT, lifting, running, and perfecting the specialized functional movements for the event. 
                     </p>
                     <p className="mt-4">
-                        Bi-weekly, I attend a Hyrox-specific class at my gym. After completing the mixed doubles event in Manchester, I am currently pushing my limits to finish my first solo event in London. This level of physical discipline and mental resilience is what drives me to perform at my peak.
+                        Bi-weekly, I attend a Hyrox-specific class at my gym. After completing the mixed doubles event in Manchester, I am currently pushing my limits to finish my first solo event in London. 
                     </p>
                 </div>
             ),
