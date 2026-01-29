@@ -7,7 +7,7 @@ import Projects from './components/Projects.jsx';
 import Skills from './components/Skills.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-// force red
+// force re
 export default function App() {
   const [theme, setTheme] = useState('light');
 
