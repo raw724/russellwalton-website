@@ -18,7 +18,7 @@ export default function Hero() {
 
         {/* UPDATED LINK HERE */}
         <a 
-          href="/project/red-bull" 
+          href="/goal-details" 
           className="p-8 rounded-2xl border-2 border-[--accent-to] shadow-lg 
                      bg-gradient-to-br from-[--accent-to]/10 to-[--accent-from]/10 
                      hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] transition-all duration-300 
