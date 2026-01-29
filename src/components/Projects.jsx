@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // 1. Import Link for navigation
+import { Link } from 'react-router-dom';
 
-// RENAME and EXPORT the data array so the new ProjectDetails component can access it.
 export const projectsData = [
-  // 2. Add 'slug' property for use in the URL
-  { id: 1, title: 'Hyrox', slug: 'hyrox', tech: 'Fitness, Endurance, Discipline', desc:""},
-  { id: 2, title: 'High Perfomance Sailing', slug: 'sailing', tech: 'Strategy, Teamwork, Technical Skill', desc:""},
-  { id: 3, title: 'Technical Projects', slug: 'tech', tech: 'Python, Web Development, Machine Learning', desc:""}
+  { id: 1, title: 'Hyrox', slug: 'hyrox', tech: 'Fitness, Endurance, Discipline', desc: "" },
+  { id: 2, title: 'High Performance Sailing', slug: 'sailing', tech: 'Strategy, Teamwork, Technical Skill', desc: "" },
+  { id: 3, title: 'Technical Projects', slug: 'tech', tech: 'Python, Web Development, Machine Learning', desc: "" }
 ];
 
 export default function Projects() {
@@ -15,18 +13,22 @@ export default function Projects() {
       <h3 className="text-2xl font-bold mb-6">Personal Pursuits</h3>
       <div className="grid md:grid-cols-3 gap-6">
         {projectsData.map((p, i) => (
-          // 3. Replace <div> with <Link> and set the dynamic destination
           <Link 
             key={i} 
-            to={`/project/${p.slug}`} // Links to dynamic path: /project/hyrox
-            // Apply card styling and make it look clickable
-            className="glass p-6 block cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            to={`/project/${p.slug}`} 
+            // ADDED: 'min-h-[200px]' makes it taller. 'flex flex-col justify-between' pushes the "Read More" to the bottom.
+            className="glass p-8 block cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-h-[240px] flex flex-col justify-between"
           >
-            <h4 className="font-semibold">{p.title}</h4>
-            <p className="text-[--muted] mt-2">{p.desc}</p>
-            <p className="text-sm mt-2">{p.tech}</p>
-            {/* Add a visual cue to indicate this navigates */}
-            <span className="text-sm text-[--accent-to] mt-3 block font-semibold">Read More &rarr;</span>
+            <div>
+                <h4 className="text-xl font-bold mb-3">{p.title}</h4>
+                {/* We removed the desc, so we just show the tech tags now */}
+                <p className="text-sm text-[--muted] leading-relaxed">{p.tech}</p>
+            </div>
+            
+            {/* The arrow will now stick to the bottom of the box */}
+            <span className="text-sm text-[--accent-to] mt-4 font-bold flex items-center gap-2">
+                Read More <span className="text-lg">&rarr;</span>
+            </span>
           </Link>
         ))}
       </div>
