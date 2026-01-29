@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projectsData } from './Projects.jsx'; 
 
-// Extend the data with detailed content
+// 1. Extend the data with specific HTML details
 const detailedProjectData = projectsData.map(p => {
+    // HYROX
     if (p.slug === 'hyrox') {
         return {
             ...p,
@@ -22,6 +23,7 @@ const detailedProjectData = projectsData.map(p => {
         };
     }
     
+    // SAILING
     if (p.slug === 'sailing') {
         return {
             ...p,
@@ -50,11 +52,12 @@ const detailedProjectData = projectsData.map(p => {
         };
     }
 
+    // TECH
     if (p.slug === 'tech') {
         return {
             ...p,
             details: (
-                <> {/* Wrapped in a fragment to allow multiple top-level elements */}
+                <>
                     <div className="tech-details">
                         <p>
                             This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
@@ -63,7 +66,6 @@ const detailedProjectData = projectsData.map(p => {
                             For example, I created a machine learning and AI based program to predict the likelihood of rain, depending on historical data called RainCheck (pictured above). 
                         </p>
                     </div>
-                    {/* Fixed 'href' and added protocol + styling */}
                     <a 
                         href="https://github.com/raw724" 
                         target="_blank" 
@@ -78,61 +80,68 @@ const detailedProjectData = projectsData.map(p => {
             tags: ['Python', 'Web Development', 'Machine Learning']
         };
     }
+
     return p;
 });
 
 export default function ProjectDetails() {
-    // 1. Get the slug from the URL
     const { slug } = useParams();
-    
-    // 2. Find the project data that matches the slug
     const project = detailedProjectData.find(p => p.slug === slug);
 
-    // If project is not found (e.g., bad URL), display a 404-like message
+    // 404 Check
     if (!project) {
         return (
-            <div className="min-h-screen pt-40 text-center max-w-4xl mx-auto">
+            <div className="min-h-screen pt-40 text-center max-w-4xl mx-auto px-6">
                 <h1 className="text-4xl font-extrabold mb-4">404 - Project Not Found</h1>
-                <p className="text-[--muted] mb-8">
-                    We couldn't find a project with the identifier: **{slug}**.
-                </p>
                 <Link to="/" className="btn btn-primary">Return to Home</Link>
             </div>
         );
     }
     
-    // 3. Render the project details
     return (
-        <section className="pt-40 pb-20 max-w-6xl mx-auto">
+        <section className="pt-40 pb-20 max-w-6xl mx-auto px-6">
             {/* Back Button */}
-            <Link to="/" className="text-[--accent-to] flex items-center gap-2 mb-8 font-semibold">
+            <Link to="/" className="text-[--accent-to] flex items-center gap-2 mb-8 font-semibold hover:underline">
                 &larr; Back to Pursuits
             </Link>
     
-            {/* Title and Image */}
+            {/* Title */}
             <h1 className="text-5xl font-extrabold mb-8">{project.title}</h1>
             
+            {/* Banner Image with Safety Check */}
             <img 
                 src={project.imgUrl} 
                 alt={`${project.title} Banner`} 
-                className="w-full rounded-xl object-cover mb-10 shadow-lg"
-                onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/1200x400/7c3aed/ffffff?text=Image+Placeholder'; }}
+                className="w-full h-auto max-h-[500px] object-cover rounded-xl mb-10 shadow-lg"
+                onError={(e) => { 
+                    e.target.onerror = null; 
+                    e.target.style.display = 'none'; // Hide if image missing
+                }}
             />
     
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-12">
                 {/* Main Content */}
                 <div className="lg:col-span-2">
-                    {/* This renders your new detailed paragraphs and lists */}
                     <div className="text-xl leading-relaxed">
                         {project.details}
                     </div>
-                    
-                    {/* DO NOT put {project.desc} or the <h3>Key Focus</h3> here */}
+                    {/* KEY FOCUS SECTION REMOVED COMPLETELY */}
                 </div>
                 
+                {/* Sidebar Tags */}
                 <div className="lg:col-span-1">
-                    {/* Left empty for professional spacing */}
+                    <div className="glass p-6">
+                        <h3 className="text-xl font-bold mb-4">Focus Areas</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {project.tags?.map(tag => (
+                                <span key={tag} className="px-3 py-1 rounded-full text-sm font-medium bg-[--accent-to]/10 text-[--accent-to] border border-[--accent-to]/20">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     );
+}
