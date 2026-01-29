@@ -16,15 +16,14 @@ export default function Hero() {
           </div>
         </div>
 
+        {/* UPDATED LINK HERE */}
         <a 
-          href="/goal-details" 
-          // 1. VISUAL STANDOUT: Use accent colors for a striking look.
+          href="/project/red-bull" 
           className="p-8 rounded-2xl border-2 border-[--accent-to] shadow-lg 
                      bg-gradient-to-br from-[--accent-to]/10 to-[--accent-from]/10 
                      hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] transition-all duration-300 
-                     cursor-pointer block" // 'block' makes the link fill the container
+                     cursor-pointer block"
         >
-          <div className="text-center">
             
             {/* 2. RED BULL THEME: Use a rocket icon and accent color for the header */}
             <h3 className="text-2xl font-black mb-3 flex items-center justify-center gap-3 text-[--accent-to]">
