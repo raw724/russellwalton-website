@@ -7,7 +7,6 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'hyrox') {
         return {
             ...p,
-            desc: "",
             details: (
                 <div className="hyrox-details">
                     <p>
@@ -26,7 +25,6 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'sailing') {
         return {
             ...p,
-            desc: "",
             details: (
                 <div className="sailing-details">
                     <p>
@@ -55,7 +53,6 @@ const detailedProjectData = projectsData.map(p => {
     if (p.slug === 'tech') {
         return {
             ...p,
-            desc: "",
             details: (
                 <> {/* Wrapped in a fragment to allow multiple top-level elements */}
                     <div className="tech-details">
