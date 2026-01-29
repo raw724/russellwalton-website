@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'; // 1. Import Link for navigation
 // RENAME and EXPORT the data array so the new ProjectDetails component can access it.
 export const projectsData = [
   // 2. Add 'slug' property for use in the URL
-  { id: 1, title: 'Hyrox', slug: 'hyrox', desc: 'Vigorously training in preparation for my first of many Hyrox events in Manchester, January', tech: 'Fitness, Endurance, Discipline'},
-  { id: 2, title: 'High Perfomance Sailing', slug: 'sailing', desc: 'Sailing competitively on a national and world stage with my sister; yes, my sister, eek!', tech: 'Strategy, Teamwork, Technical Skill'},
-  { id: 3, title: 'Technical Projects', slug: 'tech', desc: 'I enjoy working on technical projects on new exciting initiatives; just like this website.', tech: 'Python, Web Development, Machine Learning'}
+  { id: 1, title: 'Hyrox', slug: 'hyrox', tech: 'Fitness, Endurance, Discipline'},
+  { id: 2, title: 'High Perfomance Sailing', slug: 'sailing', tech: 'Strategy, Teamwork, Technical Skill'},
+  { id: 3, title: 'Technical Projects', slug: 'tech', tech: 'Python, Web Development, Machine Learning'}
 ];
 
 export default function Projects() {
