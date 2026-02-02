@@ -87,7 +87,7 @@ export default function GoalDetails() {
             </blockquote>
             
             <p>
-              As a Student Marketeer, I am part of a dynamic team responsible for driving brand image and product understanding on campus and in the region. The goal is to build a loyal consumer base by inviting consumers to try the product in the right moments.
+              space to be filled
             </p>
 
             {/* 3. CARDS SECTION */}
@@ -101,7 +101,7 @@ export default function GoalDetails() {
                     <h3 className="font-bold text-white uppercase tracking-wider">Strategic Planning</h3>
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                  Developing strategies to engage students and locals, analyzing territory trends, and executing marketing initiatives with precision.
+                 space to be filled
                 </p>
               </div>
 
@@ -114,7 +114,7 @@ export default function GoalDetails() {
                     <h3 className="font-bold text-white uppercase tracking-wider">Brand Ambassadorship</h3>
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                  Embodying the Red Bull lifestyle, supporting sales teams, and managing event logistics to ensure premium brand experiences.
+                  space to be filled
                 </p>
               </div>
             </div>
@@ -138,3 +138,4 @@ export default function GoalDetails() {
     </section>
   );
 }
+
