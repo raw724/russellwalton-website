@@ -63,7 +63,8 @@ const detailedProjectData = projectsData.map(p => {
                             This portfolio itself is an ongoing technical project, built using Vite, React, and Tailwind CSS. My other project area of interest has focused on using Python to solve real-world problems and enhance user experiences. 
                         </p>
                         <p className="mt-4">
-                            For example, I created a machine learning and AI based program to predict the likelihood of rain, depending on historical data called RainCheck (pictured above). 
+                            For example, I created a project that makes use of machine learning and AI-based programming to predict the likelihood of rain, depending on historical data called RainCheck (pictured above). I also have work experience at Scientific Games as a game developer. 
+                            Aiding the design, coding and logic behind online gambling-based games. Experiences using Java, typescript and commercial IDE and server integration systems.
                         </p>
                     </div>
                     <a 
