@@ -72,7 +72,7 @@ export default function GoalDetails() {
              )}
              
              <h1 className="text-4xl md:text-6xl font-black uppercase tracking-widest text-white drop-shadow-lg">
-                Student Marketeer
+                Red Bull Student Marketeer
              </h1>
           </div>
 
@@ -92,3 +92,4 @@ export default function GoalDetails() {
     </section>
   );
 }
+
