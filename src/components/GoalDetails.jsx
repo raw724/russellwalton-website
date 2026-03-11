@@ -76,15 +76,18 @@ export default function GoalDetails() {
              </h1>
           </div>
 
-          {/* 2. PORTRAIT VIDEO PLACEHOLDER */}
+          {/* 2. PORTRAIT VIDEO */}
           {/* aspect-[9/16] forces a standard mobile video ratio */}
-          <div className="w-full max-w-sm aspect-[9/16] bg-black/50 border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center relative overflow-hidden shadow-2xl">
-              {/* Subtle gradient overlay to make it look less plain */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#DB0A40]/10 pointer-events-none"></div>
-              
-              <p className="text-gray-400 font-bold uppercase tracking-widest z-10 animate-pulse text-center px-6">
-                Video Dropping Soon
-              </p>
+          <div className="w-full max-w-sm aspect-[9/16] bg-black/50 border border-white/10 rounded-xl flex items-center justify-center relative overflow-hidden shadow-2xl">
+              <video 
+                className="w-full h-full object-cover"
+                controls 
+                playsInline
+                preload="metadata"
+              >
+                <source src="/images/russell_walton_-_redbull_v2 (1080p).mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
           </div>
 
         </div>
@@ -92,4 +95,3 @@ export default function GoalDetails() {
     </section>
   );
 }
-
