@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="text-center">
             {/* 2. RED BULL THEME: Use a rocket icon and accent color for the header */}
             <h3 className="text-2xl font-black mb-3 flex items-center justify-center gap-3 text-[--accent-to]">
-                MY NEXT GOAL 🚀
+                MY NEXT GOAL
             </h3>
             
             <p className="text-xl font-bold text-[--text] mt-2 max-w-xs mx-auto">
